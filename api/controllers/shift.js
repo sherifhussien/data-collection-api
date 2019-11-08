@@ -59,29 +59,24 @@ const deleteOne = async (req, res) => {
     try {
         let shifts = await Shift.find({}, null, { sort: { date: 1, shift: 1 } })
         const matches = await Match.find({}, null, { sort: { deadline_date: 1, deadline_shift: 1 } })
+        
         const old_delay = await matchDelayCount(shifts, matches)
-
-        const shift = await Shift.findByIdAndRemove(req.params.shiftId)
-
-        shifts = await Shift.find({}, null, { sort: { date: 1, shift: 1 } })
+        shifts = shifts.filter(shift => shift.id != req.params.shiftId)
         const new_delay = await matchDelayCount(shifts, matches)
 
-        if (!shift) {
-            return res.status(404).json({
-                message: 'shift not found with id ' + req.params.shiftId
-            });
-        }
 
         if (new_delay > old_delay) {
-            await Shift.create({
-                date: shift.date,
-                shift: shift.shift,
-                user_id: shift.user_id
-            })
             return res.status(200)
                 .json({
                     message: `Denied!`
                 })
+        }
+        
+        const shift = await Shift.findByIdAndRemove(req.params.shiftId)
+        if (!shift) {
+            return res.status(404).json({
+                message: 'shift not found with id ' + req.params.shiftId
+            });
         }
 
         return res.status(200)
