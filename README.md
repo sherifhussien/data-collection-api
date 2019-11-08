@@ -22,7 +22,7 @@ docker-compose --version
 navigate to the data-collection-api directory where we have our docker-compose.yml file
 
 ```bash
-<path_to_docker-compose.yml>
+cd <path_to_docker-compose.yml>
 ```
 
 build the image

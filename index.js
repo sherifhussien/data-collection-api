@@ -10,7 +10,7 @@ require('./api/config/db')
 require('./api/models/shift')
 require('./api/models/match')
 // seed database
-// require('./seeds')
+require('./seed')
 
 const shiftRoute = require('./api/routes/shift')
 const matchRoute = require('./api/routes/match')
