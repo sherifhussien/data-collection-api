@@ -1,76 +1,76 @@
-[
+module.exports = [
     {
         "user_id": 1,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     }, {
         "user_id": 2,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     },
     {
         "user_id": 3,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     },
     {
         "user_id": 4,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     },
     {
         "user_id": 5,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "night"
     },
     {
         "user_id": 6,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "night"
     },
     {
         "user_id": 7,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "night"
     },
     {
         "user_id": 8,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "night"
     },
     {
         "user_id": 9,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     },
     {
         "user_id": 10,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "morning"
     },
     {
         "user_id": 3,
-        "date": "2019-10-10",
+        "date": new Date("2019-10-10"),
         "shift": "night"
     },
     {
         "user_id": 1,
-        "date": "2019-10-11",
+        "date": new Date("2019-10-11"),
         "shift": "over-night"
     },
     {
         "user_id": 5,
-        "date": "2019-10-11",
+        "date": new Date("2019-10-11"),
         "shift": "morning"
     },
     {
         "user_id": 4,
-        "date": "2019-10-11",
+        "date": new Date("2019-10-11"),
         "shift": "morning"
     },
     {
         "user_id": 10,
-        "date": "2019-10-12",
+        "date": new Date("2019-10-12"),
         "shift": "morning"
     }
 ]

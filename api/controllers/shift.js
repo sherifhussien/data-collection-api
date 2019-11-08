@@ -37,7 +37,11 @@ const create = async (req, res) => {
     }
     
     try {
-        await Shift.create(req.body)
+        await Shift.create({
+            user_id: req.body.user_id,
+            shift: req.body.shift,
+            date: new Date(req.body.date)
+        })
 
         return res.status(201)
             .json({
